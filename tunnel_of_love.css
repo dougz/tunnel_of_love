@@ -1,0 +1,12 @@
+#puzz { display: flex;
+	justify-content: center;
+	align-items: center;
+      }
+
+#puzz img { margin: 4px; }
+#puzz td { text-align: center; }
+
+#puzz button.main { width: 120px; height: 120px; }
+
+#puzz #room { color: blue; }
+
