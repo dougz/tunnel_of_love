@@ -22,7 +22,6 @@ import asyncio
 import json
 import os
 import time
-import unicodedata
 
 import http.client
 import tornado.web
@@ -115,17 +114,16 @@ class DebugHandler(tornado.web.RequestHandler):
 
 def make_app(options):
   GameState.set_globals(options)
-
-  handlers = [
-    (r"/tunmove/(\d+)/(\S+)", MoveHandler),
-    (r"/tundebug/(\S+)", DebugHandler),
-    ]
-
+  handlers = [(r"/tunmove/(\d+)/(\S+)", MoveHandler)]
+  if options.debug:
+    handlers.append((r"/tundebug/(\S+)", DebugHandler))
   return handlers
 
 
 def main():
   parser = argparse.ArgumentParser(description="Run the Tunnel of Love puzzle.")
+  parser.add_argument("--debug", action="store_true",
+                      help="Run in debug mode.")
   parser.add_argument("--assets_json", default=None,
                       help="JSON file for sound assets")
   parser.add_argument("-c", "--cookie_secret",
@@ -133,12 +131,8 @@ def main():
                       help="Secret used to create session cookies.")
   parser.add_argument("--socket_path", default="/tmp/tunneloflove",
                       help="Socket for requests from frontend.")
-  # parser.add_argument("--wait_url", default="tunwait",
-  #                     help="Path for wait requests from frontend.")
   parser.add_argument("--main_server_port", type=int, default=2020,
                       help="Port to use for requests to main server.")
-  # parser.add_argument("--min_players", type=int, default=1,
-  #                     help="Number of players needed to start game.")
 
   options = parser.parse_args()
 
