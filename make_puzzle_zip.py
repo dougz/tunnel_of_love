@@ -56,6 +56,10 @@ with zipfile.ZipFile("tunnel_of_love.zip", mode="w") as z:
     with z.open(fn, "w") as f_out:
       with open(fn, "rb") as f_in:
         f_out.write(f_in.read())
+        
+  for fn in ("static_puzzle.html", "static.js",
+             "forward.jpg", "start.jpg", "start_over.jpg", "turn_left.jpg", "turn_right.jpg"):
+    z.write(fn)
 
 
 
