@@ -26,6 +26,7 @@ var sound_names = [
     'hallelujah',
     'horn',
     'hounds',
+    'intro',
     'panama',
     'soldiers',
     'surprise',
@@ -33,20 +34,15 @@ var sound_names = [
 
 function preload() {
     var i;
-    var sound_name;
+    [
+	'forward', 'start', 'start_over', 'turn_left', 'turn_right', 'forward'
+    ].forEach(function(n) {
+	game.load.image(n, document.getElementById(n).src)
+    })
     
-    game.load.image('start', 'start.jpg');
-    game.load.image('start_over', 'start_over.jpg');
-    game.load.image('turn_left', 'turn_left.jpg');
-    game.load.image('turn_right', 'turn_right.jpg');
-    game.load.image('forward', 'forward.jpg');
-    
-    game.load.audio('intro', 'intro.m4a');
-    
-    for (i in sound_names) {
-        sound_name = sound_names[i];
-        game.load.audio(sound_name, sound_name + '.m4a');
-    }
+    sound_names.forEach(function(n) {
+	game.load.audio(n, document.getElementById(n).src)
+    })
 }
 
 
@@ -135,10 +131,9 @@ function create() {
     start_new_sprite.events.onInputUp.add(onStartNewUp, this);
     
     intro_sound = game.add.audio('intro');
-    for (i in sound_names) {
-        sound_name = sound_names[i];
-        sounds[sound_name] = game.add.audio(sound_name);
-    }
+    sound_names.forEach(function(sound_name) {
+	sounds[sound_name] = game.add.audio(sound_name);
+    })
 }
 
 function onStartNewUp() {
