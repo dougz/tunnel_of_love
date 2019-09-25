@@ -27,6 +27,32 @@
       <p>_ _ _⑩_ _ _ _</p>
       <p>_ _ _ &emsp; _ _ _ _⑫</p>
     </div>
+    <div style="display:none;">
+      <p>The static-puzzle-generation hashes the names of the
+	game asset files. It fixes up <tt>src=</tt> references, but
+	doesn't fix up JS code. So... create some elements with
+	<tt>src=</tt> references that the JS code can then use to
+	load the assets:
+      <img id=forward src="forward.jpg">
+      <img id=start src="start.jpg">
+      <img id=start_over src="start_over.jpg">
+      <img id=turn_left src="turn_left.jpg">
+      <img id=turn_right src="turn_right.jpg">
+      <audio id=bell src="bell.m4a"></audio>
+      <audio id=chicken src="chicken.m4a"></audio>
+      <audio id=clock src="clock.m4a"></audio>
+      <audio id=crickets src="crickets.m4a"></audio>
+      <audio id=echo src="echo.m4a"></audio>
+      <audio id=grammar src="grammar.m4a"></audio>
+      <audio id=growl src="growl.m4a"></audio>
+      <audio id=hallelujah src="hallelujah.m4a"></audio>
+      <audio id=horn src="horn.m4a"></audio>
+      <audio id=hounds src="hounds.m4a"></audio>
+      <audio id=intro src="intro.m4a"></audio>
+      <audio id=panama src="panama.m4a"></audio>
+      <audio id=soldiers src="soldiers.m4a"></audio>
+      <audio id=surprise src="surprise.m4a"></audio>
+    </div>
     <script src="static.js"></script>
   </body>
 </html>
