@@ -1,5 +1,143 @@
-<html>
-  <body>
-    TBD: write the solution
-  </body>
-</html>
+<p>Below the flavortext are two main items:
+
+<ul>  
+<li> A link to a simple app in which a voice first says, “Hey everyone! Let’s play hide ‘n’ seek!” after which the 
+solver can wander around a large, dark chamber with numbered rooms. The only things one encounters 
+are certain weird sounds in various specific locations. 
+<li> A series of blank spaces with numbers under certain blanks.
+</ul>
+
+<p>Eventually, by traveling around and mapping the sounds, the solver will realize that the giant chamber is 
+basically a 13x8 grid. (The yellow square is where the solver begins whenever they start or restart the app.) 
+  Below are locations and descriptions of all the sounds that we’d hear.
+</p>
+
+<style>
+  #tunnelmap td { width: 4em; border: 1px solid gray; }
+  #tunnelmap td.c { text-align: center; }
+</style>
+<center>
+<table id=tunnelmap>
+  <tr> <td> 1 <td> 2 <td> 3 @ <td> 4 <td> 5 <td> 6 <td> 7 <td> 8 <td> 9 <td> 10 <td> 11 * <td> 12 <td> 13 ^ </tr>
+  <tr> <td> 14 * <td> 15 <td> 16 <td> 17 <td> 18 <td> 19 <td> 20 <td> 21 <td> 22 <td> 23 <td> 24 % <td> 25 # <td> 26 </tr>
+  <tr> <td> 27 + <td> 28 - <td> 29 <td> 30 <td> 31 <td> 32 <td> 33 <td> <td> 35 &gt; <td> <td> 37 * <td> <td> 39 * </tr>
+  <tr> <td> 40 <td> 41 <td> 42 <td> 43 <td> 44 <td> 45 <td> 46 <td> 47 <td> 48 * <td> 49 <td> 50 <td> 51 ? <td> 52 = </tr>
+  <tr> <td> 53 * <td> 54 <td> 55 <td> 56 <td> 57 * <td> 58 <td class=c> START <td> 60 <td> 61 <td> 62 &lt; <td> 63 <td> 64 <td> 65 </tr>
+  <tr> <td> 66 <td> 67 <td> 68 <td> 69 <td> 70 $ <td> 71 <td> 72 <td> 73 <td> 74 <td> 75 <td> 76 <td> 77 * <td> 78 </tr>
+  <tr> <td> 79 <td> 80 <td> 81 <td> 82 * <td> 83 <td> 84 <td> 85 <td> 86 \ <td> 87 <td> 88 <td> 89 <td> 90 <td> 91 </tr>
+  <tr> <td> 92 <td> 93 <td> 94 <td> 95 <td> 96 <td> 97  <td> 98 <td> 99 <td> 100 <td> 101 <td> 102 <td> 103 <td> 104 </tr>
+</table>  
+
+<style>
+  .suchdetail th { border-bottom: 1px dotted gray; }
+  .suchdetail td.n { text-align: right; }
+  /* Keep it class=y: */
+  .suchdetail .y { background-color: yellow; font-weight: bold; text-align: center; }
+</style>
+
+<table class=suchdetail>
+<tr> <th>  <th> NOISE </tr>
+<tr> <td>* <td> A small bell ringing 
+<tr> <td>+<td> “I before e, except after c.” 
+<tr> <td>@ <td> “A man, a plan, a canal, Panama!” 
+<tr> <td>^ <td> Echo-y “Hello!... Hello… hello…” 
+<tr> <td>- <td> A group of people yelling “Surprise!” 
+<tr> <td>= <td> A clock ticking
+<tr> <td>> <td> A chorus singing “Alleluia!” 
+<tr> <td># <td> Crickets chirping in the evening 
+<tr> <td>% <td> A hunting bugle with hounds barking 
+<tr> <td>? <td> An officer barking marching orders
+<tr> <td>< <td> A car horn honking 
+<tr> <td>$ <td> A chicken clucking
+<tr> <td>\ <td> A growl, as if from a bear
+</table>  
+</center>
+
+<p><b>WAYS FOR THE SOLVER TO GET TO THE BIG “AHA” </b></p>
+<ul>
+  <li> “It’s a 13 by 8 grid with 104 rooms. Is there a significance to those dimensions or to that total number?” 
+<li> “Why does that starting audio exist? Is there any significance or hidden message to it?” 
+<li> “What’s with that capitalization in the flavortext?” 
+<li> Guessing at names for the sounds (based on the blank spaces) and googling the right ones together will 
+definitely lead to something…
+</ul>
+
+<p><b>THE BIG “AHA” </b>
+  <ul>
+<li> The voice at the beginning isn’t saying, “Let’s play hide ‘n’ seek.” It’s saying, “Let’s play HAYDN seek.” 
+<li> Haydn has exactly 104 numbered symphonies, many of which have formal nicknames. Thus each square 
+must represent one of Haydn’s symphonies. 
+<li> More confirmation: Haydn’s music is from the Classical era, so technically it’s a little early to be labeled 
+“Romantic music”. 
+  </ul>
+  
+<p><b>FROM THERE…</b>
+  <ul>
+<li> Each sound references a Haydn symphony by its formal nickname (“The Bear,” “The Palindrome,” 
+“Military”, “La Chasse,” etc.). The only sound without a clear link to a nickname is the bell ringing, but since 
+that’s also the only sound that repeats, maybe it has a different significance.
+  </ul>
+
+<p>Now one can fill in the blanks with the proper symphony nicknames (the blanks will also help weed out 
+any discrepencies in the correct names). To help with solving, the symphonies are listed in increasing 
+  numerical order:</p>
+
+<ul>
+  <li> Le Soir
+  <li> Alleliua
+  <li> Hornsignal
+  <li> Echo
+  <li> The Palindrome
+  <li> The Schoolmaster
+  <li> La Chasse
+  <li> The Bear
+  <li> The Hen
+  <li> The Surprise
+  <li> Military
+  <li> The Clock
+</ul>
+
+<p>The numbered spaces, in order, spell out the instruction DO NUMBERLINK.
+
+<p>The rooms are numbered 1 through 104. Thus, each sound has two clear positions connected to it: its actual 
+location, and the location of its corresponding symphony number’s room. However, if we’re simply try to 
+connect the locations in traditional numberlink style, there’s not a unique solution.   
+
+<p>The solver may notice that for symphonies with shorter names, the two locations are pretty close to each other. 
+In fact, many (ECHO, LE SOIR, etc.) are exactly as many rooms away from each other as the symphony’s word 
+length. Are we supposed to connect the two endpoints using each symphony’s name? Totalling the letters in all 
+  the symphony names gives us 104, suggesting that yes we should do that, and that will perfectly fill up the grid.
+
+<p>It turns out there is only one way to make all the connections in the grid such that each line takes up exactly 
+  the same number of squares as its symphony name.
+
+<p>Once all the connections are made, one can then fill in the grid using the symphony nicknames. Each 
+symphony name starts at the proper number for its symphony and then winds its way to its endpoint, where 
+the sound was found in the grid. (The final sentence of the flavortext helps clue this direction for us.) 
+
+<p>The only thing we haven’t yet used are the spaces that have a bell ringing. Each symphony, it turns out, has 
+either 0 squares or 1 square with a bell in it. Below are those highlighted spaces and letters. Reading the 
+  letters in numerical order of the symphonies (as given on the puzzle page) gives us the solution, ORCHESTRA.
+
+<center>
+
+<p>
+  <img src="solution/solved-numberlink.png" alt="numberlink, solved, with dings highligted" style="max-width: 100%;">
+</p>
+
+<table class=suchdetail>
+<tr> <th> <th> NOISE <th> SYMPH. TITLE <th> SYMPH.<br> # <th> TITLE<br>LEN. <th class=y> BELL
+<tr> <td> # <td> Crickets chirping in the evening <td> LE SOIR <td class=n> 8 <td class=n> 6 <td class=y> O 
+<tr> <td> &gt; <td> A chorus singing “Alleluia!” <td>ALLELUIA <td class=n> 30 <td class=n> 8
+<tr> <td> &lt; <td> A car horn honking <td> HORNSIGNAL <td class=n> 31 <td class=n> 10 <td class=y> R 
+<tr> <td> ^ <td> Echo-y “Hello!... Hello… hello…” <td> ECHO <td class=n> 38 <td class=n> 4 <td class=y> C 
+<tr> <td> @ <td> “A man, a plan, a canal, Panama!” <td> THE PALINDROME <td class=n> 47 <td class=n> 13 <td class=y> H 
+<tr> <td> + <td> “I before e, except after c.” <td> THE SCHOOLMASTER <td class=n> 55 <td class=n> 15 <td class=y> E 
+<tr> <td> % <td> A hunting bugle with hounds barking <td> LA CHASSE <td class=n> 73 <td class=n> 8 <td class=y> S 
+<tr> <td> \ <td> A growl, as if from a bear <td> THE BEAR <td class=n> 82 <td class=n> 7 <td class=y> T 
+<tr> <td> $ <td> A chicken clucking <td> THE HEN <td class=n> 83 <td class=n> 6
+<tr> <td> - <td> A group of people yelling “Surprise!” <td> THE SURPRISE <td class=n> 94 <td class=n> 11 <td class=y> R 
+<tr> <td> ? <td> An officer barking marching orders <td> MILITARY <td class=n> 100 <td class=n> 8 <td class=y> A 
+<tr> <td> = <td> A clock ticking <td> THE CLOCK <td class=n> 101 <td class=n> 8
+</table>  
+</center>
