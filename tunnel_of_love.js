@@ -24,7 +24,7 @@ function tunnel_handle(msg) {
 }
 
 function tunnel_click(which) {
-    goog.net.XhrIo.send("/tunmove/" + waiter_id + "/" + which,
+    goog.net.XhrIo.send("/tunmove/" + wid + "/" + which,
 			function(e) {
      			    var code = e.target.getStatus();
      			    if (code == 200) {
