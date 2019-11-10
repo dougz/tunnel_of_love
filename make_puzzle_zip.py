@@ -29,12 +29,8 @@ with zipfile.ZipFile("tunnel_of_love.zip", mode="w") as z:
   with z.open("solution.html", "w") as f_out:
     with open("solution.html", "rb") as f_in:
       f_out.write(f_in.read())
-      
-  z.write("solution/solved-numberlink.png")
 
-  with z.open("for_ops.html", "w") as f_out:
-    with open("for_ops.html", "rb") as f_in:
-      f_out.write(f_in.read())
+  z.write("solution/solved-numberlink.png")
 
   with z.open("metadata.yaml", "w") as f_out:
     with open("metadata.yaml", "rb") as f_in:
@@ -58,7 +54,7 @@ with zipfile.ZipFile("tunnel_of_love.zip", mode="w") as z:
     with z.open(fn, "w") as f_out:
       with open(fn, "rb") as f_in:
         f_out.write(f_in.read())
-        
+
   for fn in ("static_puzzle.html", "static.js",
              "forward.jpg", "start.jpg", "start_over.jpg", "turn_left.jpg", "turn_right.jpg"):
     z.write(fn)
