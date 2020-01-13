@@ -62,9 +62,8 @@ class GameState:
       d["forward"] = True
     elif choice == "forward":
       new_pos, good = self.forward_to()
-      if not good:
-        return None
-      self.pos = new_pos
+      if good:
+        self.pos = new_pos
 
       next_pos, good = self.forward_to()
       if good: d["forward"] = True
